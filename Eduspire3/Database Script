@@ -1,0 +1,347 @@
+USE [ProjectDB]
+GO
+/****** Object:  Table [dbo].[ActivateStu_Table6]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ActivateStu_Table6](
+	[ID] [int] NOT NULL,
+	[Email] [varchar](50) NULL,
+	[Status] [varchar](50) NULL,
+	[activationcode] [varchar](50) NULL,
+ CONSTRAINT [PK_ActivateStu_Table6] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ActivateTut_Table2]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ActivateTut_Table2](
+	[ID] [int] NOT NULL,
+	[Email] [varchar](50) NULL,
+	[Status] [varchar](50) NULL,
+	[activationcode] [varchar](50) NULL,
+ CONSTRAINT [PK_ActivateTut_Table2] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Admin_Table7]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Admin_Table7](
+	[adm_ID] [int] NOT NULL,
+	[adm_FirstName] [varchar](50) NULL,
+	[adm_LastName] [varchar](50) NULL,
+	[adm_ContactNo] [varchar](20) NULL,
+	[adm_EmailID] [varchar](50) NULL,
+	[adm_Password] [varchar](50) NULL,
+	[adm_Ques] [varchar](50) NULL,
+	[adm_Ans] [varchar](50) NULL,
+ CONSTRAINT [PK_Admin_Table7] PRIMARY KEY CLUSTERED 
+(
+	[adm_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Candidate_Table8]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Candidate_Table8](
+	[can_ID] [int] NOT NULL,
+	[can_FirstName] [varchar](50) NULL,
+	[can_LastName] [varchar](50) NULL,
+	[can_ContactNo] [varchar](10) NULL,
+	[can_EmailID] [varchar](50) NULL,
+	[can_DOB] [date] NULL,
+	[can_Gender] [varchar](10) NULL,
+	[can_FileName] [varchar](max) NULL,
+	[can_ApprovalStatus] [varchar](10) NULL,
+	[Applied_On] [date] NULL,
+ CONSTRAINT [PK_Candidate_Table8] PRIMARY KEY CLUSTERED 
+(
+	[can_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ContactUs_Table4]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ContactUs_Table4](
+	[ID] [int] NOT NULL,
+	[Name] [varchar](50) NULL,
+	[Email_ID] [varchar](50) NULL,
+	[Subject] [varchar](100) NULL,
+	[Message] [varchar](max) NULL,
+	[CreatedOnDate] [datetime] NULL,
+	[RepliedOnDate] [datetime] NULL,
+	[Replied_Msg] [varchar](max) NULL,
+ CONSTRAINT [PK_ContactUs_Table4] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Course_Table13]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Course_Table13](
+	[ID] [int] NOT NULL,
+	[Course] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+ CONSTRAINT [PK_Course_Table13] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[GUID_Stu_Table]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[GUID_Stu_Table](
+	[ID] [nvarchar](50) NULL,
+	[UID] [nvarchar](50) NULL,
+	[RequestDateTime] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[GUID_Tut_Table]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[GUID_Tut_Table](
+	[ID] [nvarchar](50) NULL,
+	[UID] [nvarchar](50) NULL,
+	[RequestDateTime] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[PaymentDetails_Table11]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PaymentDetails_Table11](
+	[ID] [int] NOT NULL,
+	[stu_ID] [int] NULL,
+	[Pay_ID] [varchar](50) NULL,
+	[PlanName] [varchar](50) NULL,
+	[Amount] [varchar](50) NULL,
+	[Status] [varchar](50) NULL,
+	[CreatedDate] [datetime] NULL,
+	[Date] [varchar](50) NULL,
+ CONSTRAINT [PK_PaymentDetails_Table11] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[PlanPrice_Table10]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PlanPrice_Table10](
+	[ID] [int] NOT NULL,
+	[Basic_Price] [varchar](50) NULL,
+	[Plus_Price] [varchar](50) NULL,
+	[Pro_Price] [varchar](50) NULL,
+	[Updated_On] [datetime] NULL,
+ CONSTRAINT [PK_PlanPrice_Table10] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Questions]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Questions](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Questions] [varchar](max) NULL,
+	[Option1] [varchar](max) NULL,
+	[Option2] [varchar](max) NULL,
+	[Option3] [varchar](max) NULL,
+	[Option4] [varchar](max) NULL,
+	[Answer] [varchar](max) NULL,
+	[TestId] [int] NULL,
+	[createddate] [datetime] NULL,
+ CONSTRAINT [PK_Test] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[RegisterStu_Table5]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[RegisterStu_Table5](
+	[stu_ID] [int] NOT NULL,
+	[stu_FirstName] [varchar](50) NOT NULL,
+	[stu_LastName] [varchar](50) NOT NULL,
+	[stu_ContactNo] [varchar](10) NOT NULL,
+	[stu_EmailID] [varchar](50) NULL,
+	[stu_DOB] [date] NOT NULL,
+	[stu_Gender] [varchar](10) NOT NULL,
+	[stu_Password] [varchar](50) NOT NULL,
+	[stu_Ques] [varchar](50) NOT NULL,
+	[stu_Ans] [varchar](50) NOT NULL,
+	[PlanName] [varchar](50) NULL,
+	[PlanStartDate] [datetime] NULL,
+	[PlanEndDate] [datetime] NULL,
+	[IsPlanActive] [bit] NULL,
+	[Created_On] [datetime] NULL,
+ CONSTRAINT [PK_RegisterStu_Table5] PRIMARY KEY CLUSTERED 
+(
+	[stu_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[RegisterTut_Table1]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[RegisterTut_Table1](
+	[tut_ID] [int] NOT NULL,
+	[tut_FirstName] [varchar](50) NULL,
+	[tut_LastName] [varchar](50) NULL,
+	[tut_ContactNo] [varchar](10) NULL,
+	[tut_EmailID] [varchar](50) NULL,
+	[tut_Gender] [varchar](10) NULL,
+	[tut_Password] [varchar](50) NULL,
+	[tut_Ques] [varchar](50) NULL,
+	[tut_Ans] [varchar](50) NULL,
+	[Created_On] [date] NULL,
+ CONSTRAINT [PK_RegisterTut_Table1] PRIMARY KEY CLUSTERED 
+(
+	[tut_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ResultTable]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ResultTable](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Test_Id] [int] NULL,
+	[stu_ID] [int] NULL,
+	[TotalMarks] [varchar](50) NULL,
+	[IsPass] [bit] NULL,
+	[CreatedOn] [datetime] NULL,
+	[TotalPercentage] [varchar](50) NULL,
+	[CorretAnsCount] [int] NULL,
+	[TotalQuession] [int] NULL,
+ CONSTRAINT [PK_ResultTable] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Resume]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Resume](
+	[ResumeID] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [varchar](255) NULL,
+	[MiddleName] [varchar](255) NULL,
+	[LastName] [varchar](255) NULL,
+	[EmailAddr] [varchar](100) NULL,
+	[ContactNo] [varchar](50) NULL,
+	[Address] [varchar](255) NULL,
+	[Keyskills] [varchar](255) NULL,
+	[Employment] [varchar](500) NULL,
+	[SoftwareDev] [varchar](500) NULL,
+	[ProjectTitle] [varchar](255) NULL,
+	[ProjectTag] [varchar](255) NULL,
+	[EnterClient] [varchar](255) NULL,
+	[ProjectStatus] [varchar](50) NULL,
+	[NatureOfEmp] [varchar](255) NULL,
+	[EducationLevel] [varchar](255) NULL,
+	[BoardName] [varchar](255) NULL,
+	[PassingOutYear] [numeric](18, 0) NULL,
+	[Medium] [varchar](255) NULL,
+	[PassingPer] [varchar](50) NULL,
+	[CertificateName] [varchar](255) NULL,
+	[CertifiedOn] [datetime2](7) NULL,
+	[SkillName] [varchar](255) NULL,
+	[LastUsed] [varchar](255) NULL,
+	[WorkExperience] [varchar](255) NULL,
+ CONSTRAINT [PK__Resume__D7D7A31733A37E0B] PRIMARY KEY CLUSTERED 
+(
+	[ResumeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[TestDetails]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TestDetails](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[TestName] [varchar](100) NULL,
+	[Courses] [varchar](50) NULL,
+	[PassingPer] [varchar](50) NULL,
+	[TestStartDate] [varchar](50) NULL,
+	[TestEndDate] [date] NULL,
+	[TestDuration] [varchar](50) NULL,
+	[createdDate] [datetime] NULL,
+	[CreatedBy] [int] NULL,
+	[UpdatedDate] [datetime] NULL,
+	[UpdatedBy] [int] NULL,
+ CONSTRAINT [PK_TestDetails] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Video_Table12]    Script Date: 06-04-2023 4.13.52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Video_Table12](
+	[ID] [int] NOT NULL,
+	[tut_ID] [int] NULL,
+	[Title] [varchar](100) NULL,
+	[VideoOnCourse] [varchar](50) NULL,
+	[Description] [varchar](500) NULL,
+	[VideoPath] [varchar](250) NULL,
+	[UploadedOn] [datetime] NULL,
+	[KeywordSearch] [varchar](500) NULL,
+ CONSTRAINT [PK_Video_Table12] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Questions] ADD  CONSTRAINT [DF_Test_createddate]  DEFAULT (getdate()) FOR [createddate]
+GO
+ALTER TABLE [dbo].[ResultTable] ADD  CONSTRAINT [DF_ResultTable_CreatedOn]  DEFAULT (getdate()) FOR [CreatedOn]
+GO
+ALTER TABLE [dbo].[TestDetails] ADD  CONSTRAINT [DF_TestDetails_createdDate]  DEFAULT (getdate()) FOR [createdDate]
+GO
